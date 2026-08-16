@@ -174,7 +174,7 @@ B.S. in Computer Science & Information Technology
         </motion.div>
 
         {/* RIGHT COLUMN: Image & Graphics */}
-        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 mt-8 lg:mt-0">
+        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 mt-8 lg:-mt-16 xl:-mt-24">
 
           {/* Big Pale Gold Circle Background */}
           <motion.div
@@ -211,7 +211,7 @@ B.S. in Computer Science & Information Technology
             transition={{ duration: 0.8, ease: "easeOut" }}
             src="/hero-image.png"
             alt="Aayush"
-            className="relative -top-8 lg:-top-12 z-10 object-contain w-auto h-[400px] md:h-[550px] lg:h-[650px] drop-shadow-2xl"
+            className="relative z-10 object-contain w-auto h-[400px] md:h-[550px] lg:h-[650px] drop-shadow-2xl"
           />
 
           {/* Floating Contact Card */}
