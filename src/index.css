@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #715c00;
+  --color-primary-container: #ffe17c;
+  --color-on-primary-container: #786303;
+  --color-background: #f4fbf3;
+  --color-surface: #f4fbf3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef6ed;
+  --color-surface-container: #e8f0e7;
+  --color-surface-container-high: #e3eae2;
+  --color-surface-container-highest: #dde5dc;
+  --color-on-surface: #161d18;
+  --color-on-surface-variant: #4c4637;
+  --color-inverse-surface: #2b322d;
+  --color-inverse-on-surface: #ebf3ea;
+  --color-outline: #7d7765;
+  --color-secondary: #53615e;
+  --color-secondary-container: #d4e3df;
+  --color-on-secondary-container: #576562;
+
+  --color-brand-yellow: #ffe17c;
+  --color-brand-sage: #b7c6c2;
+  --color-brand-dark: #161d18;
+  --color-brand-light: #f4fbf3;
+}
+
+/* Custom styles for neubrutalist feel */
+.neo-border {
+  border: 4px solid #161d18;
+}
+
+.neo-border-2 {
+  border: 2px solid #161d18;
+}
+
+.neo-shadow {
+  box-shadow: 6px 6px 0px 0px #161d18;
+}
+
+.neo-shadow-sm {
+  box-shadow: 4px 4px 0px 0px #161d18;
+}
+
+.neo-shadow-lg {
+  box-shadow: 10px 10px 0px 0px #161d18;
+}
+
+/* Interactivity transitions */
+.neo-btn {
+  @apply relative inline-flex items-center justify-center font-mono font-bold uppercase tracking-wider transition-all duration-100 ease-in-out active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(22,29,24,1)] cursor-pointer;
+}
+
+.pulsing-dot {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .4;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4fbf3;
+  border-left: 4px solid #161d18;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffe17c;
+  border: 4px solid #161d18;
+}
+
+/* Dark mode overrides if dark class is on body/html */
+.dark .neo-border {
+  border-color: #ebf3ea;
+}
+
+.dark .neo-border-2 {
+  border-color: #ebf3ea;
+}
+
+.dark .neo-shadow {
+  box-shadow: 6px 6px 0px 0px #ebf3ea;
+}
+
+.dark .neo-shadow-sm {
+  box-shadow: 4px 4px 0px 0px #ebf3ea;
+}
+
+.dark .neo-shadow-lg {
+  box-shadow: 10px 10px 0px 0px #ebf3ea;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}

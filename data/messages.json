@@ -1,0 +1,23 @@
+[
+  {
+    "id": "msg-1785753554204",
+    "name": "Aayush",
+    "email": "pass26626@gmail.com",
+    "message": "hello!",
+    "timestamp": "2026-08-03 10:39 UTC"
+  },
+  {
+    "id": "msg-1",
+    "name": "Aisha Vance",
+    "email": "aisha@vancecorp.co",
+    "message": "Hey Aayush! Love the neubrutalist portfolio design! This is incredibly clean and snappy. Let's schedule a call next Tuesday to discuss our MERN dashboard project.",
+    "timestamp": "2026-07-17 14:32 UTC"
+  },
+  {
+    "id": "msg-2",
+    "name": "John Miller (Recruiter)",
+    "email": "j.miller@talentlabs.io",
+    "message": "Excellent MERN stack portfolio. The interactive terminal diagnostics widget is a very clever touch. Are you open to remote contract-to-hire roles starting next month?",
+    "timestamp": "2026-07-18 09:15 UTC"
+  }
+]
