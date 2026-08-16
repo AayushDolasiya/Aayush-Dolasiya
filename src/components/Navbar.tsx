@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sun, Moon, Briefcase, Code, MessageSquare, User, X, Home } from 'lucide-react';
+import { Sun, Moon, Briefcase, Code, MessageSquare, User, X, Home, Menu } from 'lucide-react';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -9,6 +9,7 @@ interface NavbarProps {
 export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +41,17 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         AAYUSH<span className="text-primary dark:text-brand-yellow">.DEV</span>
       </button>
 
-      {/* Nav items */}
-      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 font-mono text-sm font-bold">
+      {/* Hamburger Menu Toggle (Mobile Only) */}
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="md:hidden p-2 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark border-2 border-transparent hover:border-brand-dark dark:hover:border-brand-dark rounded-md transition-all"
+        aria-label="Toggle menu"
+      >
+        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Nav items (Desktop) */}
+      <div className="hidden md:flex items-center gap-4 lg:gap-8 font-mono text-sm font-bold">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-2 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-3 py-1.5 border-2 border-transparent hover:border-brand-dark dark:hover:border-brand-dark rounded-md transition-all active:translate-x-[1px] active:translate-y-[1px]"
@@ -127,6 +137,56 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
               </div>
             </div>
           </div>
+        </div>
+      )}
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-brand-light dark:bg-inverse-surface border-b-4 border-brand-dark dark:border-brand-light shadow-[4px_4px_0px_0px_#161d18] dark:shadow-[4px_4px_0px_0px_#ebf3ea] flex flex-col md:hidden z-30 font-mono text-sm font-bold">
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-3 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-6 py-4 border-b-2 border-brand-dark/10 dark:border-brand-light/10 active:bg-brand-yellow transition-colors"
+          >
+            <Home size={18} /> Home
+          </button>
+          <button
+            onClick={() => {
+              setShowAboutModal(true);
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-3 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-6 py-4 border-b-2 border-brand-dark/10 dark:border-brand-light/10 active:bg-brand-yellow transition-colors"
+          >
+            <User size={18} /> About
+          </button>
+          <button
+            onClick={() => {
+              scrollToSection('work');
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-3 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-6 py-4 border-b-2 border-brand-dark/10 dark:border-brand-light/10 active:bg-brand-yellow transition-colors"
+          >
+            <Briefcase size={18} /> Work
+          </button>
+          <button
+            onClick={() => {
+              scrollToSection('tech');
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-3 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-6 py-4 border-b-2 border-brand-dark/10 dark:border-brand-light/10 active:bg-brand-yellow transition-colors"
+          >
+            <Code size={18} /> Tech
+          </button>
+          <button
+            onClick={() => {
+              scrollToSection('contact');
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-3 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-6 py-4 active:bg-brand-yellow transition-colors"
+          >
+            <MessageSquare size={18} /> Contact
+          </button>
         </div>
       )}
     </nav>
