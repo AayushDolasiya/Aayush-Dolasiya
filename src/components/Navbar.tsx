@@ -32,26 +32,19 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
       className={`fixed top-0 left-0 w-full z-40 flex justify-between items-center px-4 md:px-16 h-16 transition-all duration-200 border-b-4 border-brand-dark dark:border-brand-light bg-brand-light dark:bg-inverse-surface ${scrolled ? 'shadow-[4px_4px_0px_0px_#161d18] dark:shadow-[4px_4px_0px_0px_#ebf3ea]' : 'shadow-[6px_6px_0px_0px_#161d18] dark:shadow-[6px_6px_0px_0px_#ebf3ea]'
         }`}
     >
-      {/* Logo */}
-      <button
-        aria-label="Home"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="text-2xl md:text-3xl font-headline font-extrabold text-brand-dark dark:text-inverse-on-surface tracking-tighter cursor-pointer hover:scale-101 active:scale-99 transition-all duration-150"
-      >
-        AAYUSH<span className="text-primary dark:text-brand-yellow">.DEV</span>
-      </button>
+      {/* Left: Logo */}
+      <div className="flex-1 flex justify-start">
+        <button
+          aria-label="Home"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="text-2xl md:text-3xl font-headline font-extrabold text-brand-dark dark:text-inverse-on-surface tracking-tighter cursor-pointer hover:scale-101 active:scale-99 transition-all duration-150"
+        >
+          AAYUSH<span className="text-primary dark:text-brand-yellow">.DEV</span>
+        </button>
+      </div>
 
-      {/* Hamburger Menu Toggle (Mobile Only) */}
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden p-2 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark border-2 border-transparent hover:border-brand-dark dark:hover:border-brand-dark rounded-md transition-all"
-        aria-label="Toggle menu"
-      >
-        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {/* Nav items (Desktop) */}
-      <div className="hidden md:flex items-center gap-4 lg:gap-8 font-mono text-sm font-bold">
+      {/* Center: Nav items (Desktop) */}
+      <div className="hidden md:flex flex-none justify-center items-center gap-2 lg:gap-6 font-mono text-sm font-bold">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-2 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark px-3 py-1.5 border-2 border-transparent hover:border-brand-dark dark:hover:border-brand-dark rounded-md transition-all active:translate-x-[1px] active:translate-y-[1px]"
@@ -86,6 +79,17 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         >
           <MessageSquare size={16} />
           Contact
+        </button>
+      </div>
+
+      {/* Right: Hamburger Menu Toggle (Mobile Only) */}
+      <div className="flex-1 flex justify-end">
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 text-brand-dark dark:text-inverse-on-surface hover:bg-brand-yellow dark:hover:bg-brand-yellow dark:hover:text-brand-dark border-2 border-transparent hover:border-brand-dark dark:hover:border-brand-dark rounded-md transition-all"
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
