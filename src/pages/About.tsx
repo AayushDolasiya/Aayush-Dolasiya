@@ -211,7 +211,7 @@ B.S. in Computer Science & Information Technology
             transition={{ duration: 0.8, ease: "easeOut" }}
             src="/hero-image.png"
             alt="Aayush"
-            className="relative z-10 object-contain w-auto h-[400px] md:h-[550px] lg:h-[650px] drop-shadow-2xl"
+            className="relative -top-8 lg:-top-12 z-10 object-contain w-auto h-[400px] md:h-[550px] lg:h-[650px] drop-shadow-2xl"
           />
 
           {/* Floating Contact Card */}
