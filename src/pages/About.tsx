@@ -57,25 +57,25 @@ B.S. in Computer Science & Information Technology
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { type: "spring", stiffness: 300, damping: 24 } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 24 }
     }
   };
 
   return (
     <section className="bg-brand-light dark:bg-inverse-surface w-full min-h-screen pt-28 pb-20 px-6 md:px-12 lg:px-20 overflow-hidden relative font-sans text-brand-dark dark:text-brand-light transition-colors">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 relative z-10">
-        
+
         {/* LEFT COLUMN: Content */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="flex flex-col z-20 order-2 lg:order-1"
         >
-          
+
           {/* About Me Label */}
           <motion.div variants={itemVariants} className="flex items-center gap-2 mb-6">
             <div className="w-2.5 h-2.5 rounded-full bg-[#bfa15f]"></div>
@@ -84,7 +84,7 @@ B.S. in Computer Science & Information Technology
 
           {/* Main Heading */}
           <motion.h1 variants={itemVariants} className="font-headline text-5xl md:text-6xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6">
-            Building digital experiences <br className="hidden md:block"/>
+            Building digital experiences <br className="hidden md:block" />
             that make an <span className="text-[#bfa15f]">impact.</span>
           </motion.h1>
 
@@ -98,20 +98,7 @@ B.S. in Computer Science & Information Technology
 
           {/* Buttons */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-16">
-            <button 
-              onClick={handleDownloadCV}
-              className="flex items-center gap-2 bg-[#161d18] hover:bg-[#252f28] text-[#bfa15f] px-6 py-3.5 rounded-lg font-bold text-sm transition-all hover:-translate-y-0.5 shadow-md"
-            >
-              <ArrowDown size={18} />
-              DOWNLOAD CV
-            </button>
-            <button 
-              onClick={handleLetsTalk}
-              className="flex items-center gap-2 bg-transparent border-2 border-brand-dark/20 dark:border-brand-light/20 hover:border-brand-dark dark:hover:border-brand-light text-brand-dark dark:text-brand-light px-6 py-3.5 rounded-lg font-bold text-sm transition-all hover:-translate-y-0.5"
-            >
-              <MessageSquare size={18} />
-              LET'S TALK
-            </button>
+
           </motion.div>
 
           {/* Statistics Grid */}
@@ -188,9 +175,9 @@ B.S. in Computer Science & Information Technology
 
         {/* RIGHT COLUMN: Image & Graphics */}
         <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 mt-8 lg:mt-0">
-          
+
           {/* Big Pale Gold Circle Background */}
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -202,7 +189,7 @@ B.S. in Computer Science & Information Technology
           <div className="absolute bottom-40 left-10 w-24 h-24 opacity-30 bg-[radial-gradient(#d4c39f_2px,transparent_2px)] [background-size:12px_12px] z-0"></div>
 
           {/* Handwritten Decorative Text (Hidden on small screens for cleaner layout) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -213,7 +200,7 @@ B.S. in Computer Science & Information Technology
             </p>
             {/* Simple Curved Arrow SVG */}
             <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-4">
-              <path d="M5.5 5.5C12.1667 22.1667 33.1 46.1 55.5 30.5M55.5 30.5L46.5 25.5M55.5 30.5L49.5 38.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-dark/60 dark:text-brand-light/60"/>
+              <path d="M5.5 5.5C12.1667 22.1667 33.1 46.1 55.5 30.5M55.5 30.5L46.5 25.5M55.5 30.5L49.5 38.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-dark/60 dark:text-brand-light/60" />
             </svg>
           </motion.div>
 
@@ -228,7 +215,7 @@ B.S. in Computer Science & Information Technology
           />
 
           {/* Floating Contact Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -246,7 +233,7 @@ B.S. in Computer Science & Information Technology
                 </div>
               </div>
               <div className="w-full h-px bg-white/10"></div>
-              
+
               {/* Email */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full border border-[#bfa15f]/50 flex items-center justify-center text-[#bfa15f] flex-shrink-0">
@@ -258,7 +245,7 @@ B.S. in Computer Science & Information Technology
                 </div>
               </div>
               <div className="w-full h-px bg-white/10"></div>
-              
+
               {/* Availability */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full border border-[#bfa15f]/50 flex items-center justify-center text-[#bfa15f] flex-shrink-0">
@@ -271,7 +258,7 @@ B.S. in Computer Science & Information Technology
               </div>
             </div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>
