@@ -108,20 +108,20 @@ B.S. in Computer Science & Information Technology
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 xl:gap-3 2xl:gap-4 mt-2">
             <button
               onClick={() => setShowResumeModal(true)}
-              className="neo-btn bg-brand-dark dark:bg-inverse-surface text-brand-light dark:text-inverse-on-surface px-6 md:px-8 py-3.5 rounded-full border-2 border-brand-dark dark:border-brand-light shadow-[4px_4px_0px_0px_rgba(22,29,24,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(22,29,24,1)] cursor-pointer"
+              className="neo-btn w-full sm:w-auto bg-brand-dark dark:bg-inverse-surface text-brand-light dark:text-inverse-on-surface px-6 md:px-8 xl:px-5 2xl:px-8 py-3.5 rounded-full border-2 border-brand-dark dark:border-brand-light shadow-[4px_4px_0px_0px_rgba(22,29,24,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(22,29,24,1)] cursor-pointer whitespace-nowrap"
             >
-              <span className="flex items-center gap-2 text-sm md:text-base">
+              <span className="flex items-center justify-center gap-2 text-sm md:text-base xl:text-sm 2xl:text-base">
                 <ArrowDown size={18} /> DOWNLOAD CV
               </span>
             </button>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="neo-btn bg-transparent text-brand-dark dark:text-brand-light px-6 md:px-8 py-3.5 rounded-full border-2 border-brand-dark dark:border-brand-light shadow-[4px_4px_0px_0px_rgba(22,29,24,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(22,29,24,1)] cursor-pointer"
+              className="neo-btn w-full sm:w-auto bg-transparent text-brand-dark dark:text-brand-light px-6 md:px-8 xl:px-5 2xl:px-8 py-3.5 rounded-full border-2 border-brand-dark dark:border-brand-light shadow-[4px_4px_0px_0px_rgba(22,29,24,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_rgba(22,29,24,1)] cursor-pointer whitespace-nowrap"
             >
-              <span className="flex items-center gap-2 text-sm md:text-base">
+              <span className="flex items-center justify-center gap-2 text-sm md:text-base xl:text-sm 2xl:text-base">
                 <MessageSquare size={18} /> LET'S TALK
               </span>
             </button>
