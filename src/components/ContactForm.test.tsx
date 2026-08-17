@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import ContactForm from './ContactForm';
 
 // Simple mock for fetch to avoid errors during component render
-global.fetch = () => Promise.resolve({
+globalThis.fetch = () => Promise.resolve({
   ok: true,
   json: () => Promise.resolve([])
 }) as any;
