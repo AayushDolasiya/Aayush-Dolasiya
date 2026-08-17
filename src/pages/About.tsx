@@ -222,7 +222,7 @@ B.S. in Computer Science & Information Technology
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="absolute bottom-[-80px] md:bottom-[-40px] lg:bottom-[-40px] xl:bottom-[-60px] z-30 bg-[#161d18] w-[90%] md:w-[350px] p-6 rounded-2xl shadow-2xl border border-white/5"
+            className="absolute bottom-[20px] md:bottom-[-40px] lg:bottom-[-40px] xl:bottom-[-60px] z-30 bg-[#161d18] w-[90%] md:w-[350px] p-6 rounded-2xl shadow-2xl border border-white/5"
           >
             <div className="flex flex-col gap-4">
               {/* Location */}
