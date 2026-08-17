@@ -174,7 +174,7 @@ B.S. in Computer Science & Information Technology
         </motion.div>
 
         {/* RIGHT COLUMN: Image & Graphics */}
-        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-[200px] xl:-mt-[220px]">
+        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-[500px] xl:-mt-[520px]">
 
           {/* Dotted Patterns */}
           <div className="absolute top-10 right-10 w-24 h-24 opacity-30 bg-[radial-gradient(#d4c39f_2px,transparent_2px)] [background-size:12px_12px] z-0"></div>
