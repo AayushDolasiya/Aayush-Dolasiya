@@ -174,15 +174,7 @@ B.S. in Computer Science & Information Technology
         </motion.div>
 
         {/* RIGHT COLUMN: Image & Graphics */}
-        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 -mt-4 sm:-mt-8 md:-mt-16 lg:-mt-32 xl:-mt-44">
-
-          {/* Big Pale Gold Circle Background */}
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="absolute w-[320px] h-[320px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] bg-[#f8eedb] dark:bg-[#bfa15f]/10 rounded-full z-0"
-          ></motion.div>
+        <div className="relative flex justify-center items-center w-full min-h-[500px] lg:min-h-full z-10 order-1 lg:order-2 -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-150 xl:-mt-72">
 
           {/* Dotted Patterns */}
           <div className="absolute top-10 right-10 w-24 h-24 opacity-30 bg-[radial-gradient(#d4c39f_2px,transparent_2px)] [background-size:12px_12px] z-0"></div>
@@ -193,7 +185,7 @@ B.S. in Computer Science & Information Technology
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute top-[10%] left-[-5%] lg:left-[-15%] xl:left-[-10%] z-20 hidden md:flex flex-col items-end"
+            className="absolute top-[30%] lg:top-[40%] left-[-5%] lg:left-[-15%] xl:left-[-10%] z-20 hidden md:flex flex-col items-end"
           >
             <p className="font-serif italic text-lg md:text-xl text-brand-dark/80 dark:text-brand-light/80 rotate-[-4deg] max-w-[200px] text-right mb-2">
               Passionate about solving problems and building products that matter.
@@ -204,22 +196,33 @@ B.S. in Computer Science & Information Technology
             </svg>
           </motion.div>
 
-          {/* Profile Image */}
-          <motion.img
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            src="/hero-image.png"
-            alt="Aayush"
-            className="relative z-10 object-contain w-auto h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] drop-shadow-2xl"
-          />
+          {/* Graphics Wrapper to align bottoms perfectly */}
+          <div className="relative flex justify-center items-end w-full max-w-[600px]">
+            {/* Big Pale Gold Circle Background */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="absolute bottom-0 w-[320px] h-[320px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] bg-[#f8eedb] dark:bg-[#bfa15f]/10 rounded-full z-0"
+            ></motion.div>
+
+            {/* Profile Image */}
+            <motion.img
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              src="/hero-image.png"
+              alt="Aayush"
+              className="relative z-10 object-contain w-auto h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] drop-shadow-2xl"
+            />
+          </div>
 
           {/* Floating Contact Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="absolute bottom-[-20px] md:bottom-10 lg:bottom-5 xl:bottom-10 z-30 bg-[#161d18] w-[90%] md:w-[350px] p-6 rounded-2xl shadow-2xl border border-white/5"
+            className="absolute bottom-[100px] md:bottom-49 lg:bottom-95 xl:bottom-210 z-30 bg-[#161d18] w-[90%] md:w-[350px] p-6 rounded-2xl shadow-2xl border border-white/5"
           >
             <div className="flex flex-col gap-4">
               {/* Location */}
